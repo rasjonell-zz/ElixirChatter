@@ -1,0 +1,12 @@
+<h2>The Water Cooler</h2>
+<div id="chat-box">
+  <%= for m <- @messages do %>
+    <p><b><%= m.name %>:</b> <%= m.body %></p>
+  <% end %>
+</div>
+
+<form id="chat-form" class="form-group">
+  <input type="text" placeholder="Username" id="user-name"></input>
+  <textarea placeholder="Your comment" id="user-msg"></textarea>
+  <button type="submit">Post</button>
+</form>
